@@ -1,8 +1,19 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:news_app/provider/home_provider.dart';
 import 'package:news_app/screen/home_page.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => HomeProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,10 +25,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      initialRoute: HomePage.homeRoute,
+      routes: {
+
+      },
     );
   }
 }
