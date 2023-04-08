@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: HomePage.homeRoute,
       routes: {
-
       },
     );
   }
