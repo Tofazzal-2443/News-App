@@ -1,16 +1,60 @@
-# news_app
 
-A new Flutter project.
+# Quiz Application
 
-## Getting Started
+Popular latest news articles can read through this application. There are seven category news that can simply access anyone. Not only that, whenever user click on a specified articles, it goes to the specified news website. Webview is also used.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<p align="center">
+  <img src="screenshots/all_news.jpg" width="256" hspace="4">
+  <img src="screenshots/all_news1.jpg" width="256" hspace="4">
+  <img src="screenshots/details.jpg" width="256" hspace="4">
+  <img src="screenshots/search.jpg" width="256" hspace="4">
+  <img src="screenshots/search_details.jpg" width="256" hspace="4">
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Features
+
+- Easy to use
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+
+## Setup
+
+Clone the repository
+
+```bash
+  git clone https://github.com/Tofazzal-2443/News-App.git
+```
+Move to the desired folder
+
+```bash
+  cd \News_app
+```
+To run the app, simply write
+
+```bash
+  flutter pub get
+```
+```bash
+  flutter run
+```
+## Tech Stack
+
+**Built With:** Dart, Flutter
+**State Management:** Provider
+**Data:** Rest API
+
+
+## Platform
+
+- Android
+
+
+## Support
+
+For support, please contact here [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tofazzal15/)
