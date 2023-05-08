@@ -1,32 +1,29 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:jiffy/jiffy.dart';
-import 'package:news_app/model/news_model.dart';
-import 'package:news_app/provider/home_provider.dart';
+import 'package:news_app/screen/search_screen.dart';
 import 'package:provider/provider.dart';
+import '../model/news_model.dart';
+import '../provider/home_provider.dart';
+import 'news_details.dart';
 
 class HomePage extends StatefulWidget {
-  static const String routeName = '/homePge';
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   String sortBy = "publishedAt";
-
   int pageNo = 1;
 
   @override
   Widget build(BuildContext context) {
-    var newsProvider = Provider.of<HomeProvider>(context);
+    var newsProvider = Provider.of<NewsProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Daly News"),
-        actions: [
-          Icon(Icons.search),
-          Icon(Icons.settings),
-        ],
+        title: Text("All News", style: TextStyle(fontSize: 30),),
+        actions: [IconButton(onPressed: () {Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => SearchPage()));}, icon: Icon(Icons.search))],
       ),
       body: Container(
         padding: EdgeInsets.all(12),
@@ -86,7 +83,10 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
-
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => NewsDetails(
+                              articles: snapshot.data!.articles![index],
+                            )));
                       },
                       child: Container(
                         color: Colors.white,
