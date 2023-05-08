@@ -29,11 +29,11 @@ class NewsModel {
 
 class Articles {
   Source? source;
-  Null? author;
+  String? author;
   String? title;
   String? description;
   String? url;
-  Null? urlToImage;
+  String? urlToImage;
   String? publishedAt;
   String? content;
 
