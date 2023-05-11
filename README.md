@@ -1,5 +1,5 @@
 
-# Quiz Application
+# News Application
 
 Popular latest news articles can read through this application. There are seven category news that can simply access anyone. Not only that, whenever user click on a specified articles, it goes to the specified news website. Webview is also used.
 
