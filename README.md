@@ -45,9 +45,9 @@ To run the app, simply write
 ```
 ## Tech Stack
 
-**Built With:** Dart, Flutter
-**State Management:** Provider
-**Data:** Rest API
+**Built With:** Dart, Flutter.
+**State Management:** Provider.
+**Data:** Rest API.
 
 
 ## Platform
